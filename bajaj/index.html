@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>API Data Filter</h1>
+
+        <div class="api-input">
+            <label for="json-input">Enter JSON Data:</label>
+            <textarea id="json-input" rows="5" placeholder='e.g., {"data": ["M", "1", "334", "4", "B", "Z", "a"]}'></textarea>
+            <button id="submit-btn">Submit</button>
+            <p id="input-error" class="error-message"></p>
+        </div>
+
+        <div class="filter-section">
+            <label for="filter-select">Select Filter:</label>
+            <select id="filter-select" disabled>
+                <option value="" selected disabled>Select an option</option>
+                <option value="numbers">Numbers</option>
+                <option value="alphabets">Alphabets</option>
+            </select>
+            <button id="clear-filter" disabled>Clear Filter</button>
+        </div>
+
+        <div class="filtered-response">
+            <h2>Filtered Response</h2>
+            <p id="response-text">No data to display.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
